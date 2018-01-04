@@ -4,6 +4,12 @@ const fs = require('fs');
 
 const base = "./store";
 
+try {
+  fs.statSync(base);
+} catch (e) {
+  fs.mkdirSync(base);
+}
+
 // /database/q=pp5 l1l
 // /database/key=pp5 l1l&value={}
 app.get("/database/*", (req,res) => {
@@ -24,15 +30,17 @@ app.get("/database/*", (req,res) => {
     var key = req.query.key;
     var value = req.query.value;
     if (!req.query.overwrite) {
-      var s = fs.statSync(base+"/"+key.split("").join("/"));
-      if (s.dev) {
+      try {
+        fs.statSync(base+"/"+key.split("").join("/"));
+      } catch (e) {
         res.end("{error: 'file exists, overwrite with &overwrite=true'}")
+
       }
     }
     for (var i = 1; i < key.length+1; i++) {
       var path = base+"/"+key.slice(0,i).split("").join("/");
       try {
-        var s = fs.statSync(path);
+        fs.statSync(path);
       } catch (e) {
         fs.mkdirSync(path);
       }
