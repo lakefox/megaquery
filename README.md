@@ -33,3 +33,5 @@ curl "http://localhost:8080/database/?key=KEY&value=VALUE&overwrite=true"
 Outputting
 >>> {sucess: true}
 ```
+
+### Reading a value
