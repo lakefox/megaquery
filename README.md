@@ -8,4 +8,5 @@ First download this repository then
 cd megaquery
 
 node app.js
+>>> 
 ```
