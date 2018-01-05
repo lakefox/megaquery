@@ -13,5 +13,5 @@ Running on http://localhost:8080
 ### Storing a value
 
 ```
-curl 
+curl "http://localhost:8080/database/?key=KEY&value=VALUE"
 ```
