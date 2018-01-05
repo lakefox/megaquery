@@ -9,3 +9,9 @@ First download this repository then
 /meagaquery> node app.js
 Running on http://localhost:8080
 ```
+
+### Storing a value
+
+```
+
+```
