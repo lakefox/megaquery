@@ -31,5 +31,5 @@ This mean's you have already created a file with that key, but you can overwrite
 curl "http://localhost:8080/database/?key=KEY&value=VALUE&overwrite=true"
 
 Outputting
->>> {error: 'file exists, overwrite with &overwrite=true'}
+>>> {sucess: true}
 ```
