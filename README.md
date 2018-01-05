@@ -38,4 +38,7 @@ Outputting
 ### Reading a value
 ```
 curl "http://localhost:8080/database/?q=KEY"
+
+Outputting
+>>> VALUE
 ```
