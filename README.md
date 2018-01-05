@@ -3,7 +3,7 @@ MeagaQuery is a database that is designed to search billions of key's that are s
 
 Running:
 
-First download this reposotory then 
+First download this repository then
 ```
 cd megaquery
 
