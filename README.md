@@ -5,9 +5,7 @@ MeagaQuery is a database that is designed to search billions of key's that are s
 
 First download this repository then
 ```
-cd megaquery
->>>
-node app.js
+> cd megaquery
+> node app.js
 Running on http://localhost:8080
->>> 
 ```
