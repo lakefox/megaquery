@@ -18,6 +18,7 @@ curl "http://localhost:8080/database/?key=KEY&value=VALUE"
 Outputting
 >>> {sucess: true}
 ```
+Replace KEY with the key you want to look up the value with, and replace VALUE with the data you want to store.
 
 ### Error's
 ```
