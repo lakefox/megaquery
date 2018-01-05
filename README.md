@@ -1,1 +1,1 @@
-# Mega Query
+# MegaQuery
