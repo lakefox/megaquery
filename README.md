@@ -49,5 +49,5 @@ Replace KEY with the key you previously used to store the value, VALUE is what e
 curl "http://localhost:8080/database/?q=KEY"
 
 Outputting
->>> VALUE
+>>> {error: 'value doesn't exist'}
 ```
