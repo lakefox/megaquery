@@ -24,5 +24,5 @@ Outputting
 curl "http://localhost:8080/database/?key=KEY&value=VALUE"
 
 Outputting
->>> {sucess: true}
+>>> {error: 'file exists, overwrite with &overwrite=true'}
 ```
