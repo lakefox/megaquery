@@ -14,4 +14,6 @@ Running on http://localhost:8080
 
 ```
 curl "http://localhost:8080/database/?key=KEY&value=VALUE"
+
+Outputting
 ```
