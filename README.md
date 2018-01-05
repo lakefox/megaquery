@@ -18,3 +18,11 @@ curl "http://localhost:8080/database/?key=KEY&value=VALUE"
 Outputting
 >>> {sucess: true}
 ```
+
+### Error's
+```
+curl "http://localhost:8080/database/?key=KEY&value=VALUE"
+
+Outputting
+>>> {sucess: true}
+```
