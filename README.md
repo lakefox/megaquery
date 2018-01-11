@@ -32,13 +32,6 @@ curl "http://localhost:8080/database/?key=KEY&value=VALUE"
 Outputting
 >>> {err: /*resulting error*/}
 ```
-This mean's you have already created a file with that key, but you can overwrite that file with the overwrite flag at the end of the url.
-```
-curl "http://localhost:8080/database/?key=KEY&value=VALUE&overwrite=true"
-
-Outputting
->>> {sucess: true}
-```
 
 ### Reading a value
 ```
