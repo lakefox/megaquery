@@ -11,6 +11,8 @@ then run it in your application
 ```
 const megaquery = require('megaquery');
 megaquery(8080); // Your can use any port you want
+
+// rest of your code
 ```
 
 ### Storing a value
