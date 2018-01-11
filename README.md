@@ -3,11 +3,14 @@ MeagaQuery is a database that is designed to search billions of key's that are s
 
 ### Running:
 
-First download this megaquery then
+First download this megaquery
 ```
->>> cd megaquery
->>> node app.js
-Running on http://localhost:8080
+npm install megaquery
+```
+then run it in your application 
+```
+const megaquery = require('megaquery');
+megaquery(8080); // Your can use any port you want
 ```
 
 ### Storing a value
