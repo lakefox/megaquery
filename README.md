@@ -27,8 +27,10 @@ Outputting
 #### Node.JS
 ``` javascript
 megaquery({
-	key: KEY,
-  	value: VALUE
+  key: KEY,
+  value: VALUE
+}, () => {
+  
 });
 ```
 Replace KEY with the key you want to look up the value with, and replace VALUE with the data you want to store.
