@@ -80,4 +80,4 @@ curl "http://localhost:8080/database/?q=KEY"
 Outputting
 >>> {error: 'value doesn't exist'}
 ```
-This means you have store any value with the corresponding key
+This means you haven't stored any values with the corresponding key
