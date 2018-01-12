@@ -16,12 +16,20 @@ megaquery.startServer(8080); // Your can use any port you want
 ```
 
 ### Storing a value
+#### HTTP
 
 ```
 curl "http://localhost:8080/database/?key=KEY&value=VALUE"
 
 Outputting
 >>> {sucess: true}
+```
+#### Node.JS
+``` javascript
+megaquery({
+	key: KEY,
+  	value: VALUE
+});
 ```
 Replace KEY with the key you want to look up the value with, and replace VALUE with the data you want to store.
 
