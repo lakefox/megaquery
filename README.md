@@ -38,7 +38,15 @@ Replace KEY with the key you want to look up the value with, and replace VALUE w
 curl "http://localhost:8080/database/?key=KEY&value=VALUE"
 
 Outputting
->>> {err: /*resulting error*/}
+>>> {error: 'file exists, overwrite with &overwrite=true'}
+```
+This means you are trying to write over a existing file but you can fix it by doing this
+#### HTTP
+```
+curl "http://localhost:8080/database/?key=KEY&value=VALUE&overwrite=true"
+
+Outputting
+>>> {sucess: true}
 ```
 
 ### Reading a value
