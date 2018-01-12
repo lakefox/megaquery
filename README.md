@@ -57,6 +57,7 @@ megaquery({
 });
 ```
 ### Reading a value
+#### HTTP
 ```
 curl "http://localhost:8080/database/?q=KEY"
 
