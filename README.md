@@ -56,6 +56,8 @@ megaquery({
   key: KEY,
   value: VALUE,
   overwrite: true
+}, (logs) => {
+  // logs >> {sucess: true}
 });
 ```
 ### Reading a value
