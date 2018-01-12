@@ -48,7 +48,13 @@ curl "http://localhost:8080/database/?key=KEY&value=VALUE&overwrite=true"
 Outputting
 >>> {sucess: true}
 ```
-
+#### Node.JS
+``` javascript
+megaquery({
+	key: KEY,
+  	value: VALUE
+});
+```
 ### Reading a value
 ```
 curl "http://localhost:8080/database/?q=KEY"
