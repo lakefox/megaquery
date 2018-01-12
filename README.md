@@ -29,8 +29,8 @@ Outputting
 megaquery({
   key: KEY,
   value: VALUE
-}, () => {
-  
+}, (logs) => {
+  // logs >> {sucess: true}
 });
 ```
 Replace KEY with the key you want to look up the value with, and replace VALUE with the data you want to store.
