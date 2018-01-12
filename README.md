@@ -72,6 +72,8 @@ Outputting
 ``` javascript
 megaquery({
   key: KEY
+}, (data) => {
+  
 });
 ```
 Replace KEY with the key you previously used to store the value, VALUE is what ever you stored on the server with the KEY
