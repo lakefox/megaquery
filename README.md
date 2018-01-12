@@ -51,8 +51,9 @@ Outputting
 #### Node.JS
 ``` javascript
 megaquery({
-	key: KEY,
-  	value: VALUE
+  key: KEY,
+  value: VALUE,
+  overwrite: true
 });
 ```
 ### Reading a value
