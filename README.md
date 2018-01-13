@@ -55,7 +55,7 @@ Outputting
 megaquery({
   key: KEY,
   value: VALUE,
-  overwrite: true
+  overwrite: "true" // this has to be a string
 }, (logs) => {
   // logs >> {sucess: true}
 });
