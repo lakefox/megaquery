@@ -71,7 +71,7 @@ Outputting
 #### Node.JS
 ``` javascript
 megaquery({
-  key: KEY
+  q: KEY
 }, (data) => {
   // Do Whatever
 });
