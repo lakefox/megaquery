@@ -52,7 +52,7 @@ Outputting
 ```
 #### Node.JS
 ``` javascript
-megaquery({
+megaquery.api({
   key: KEY,
   value: VALUE,
   overwrite: "true" // this has to be a string
