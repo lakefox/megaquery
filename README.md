@@ -70,7 +70,7 @@ Outputting
 ```
 #### Node.JS
 ``` javascript
-megaquery({
+megaquery.api({
   q: KEY
 }, (data) => {
   // Do Whatever
