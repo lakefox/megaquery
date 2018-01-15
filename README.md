@@ -26,7 +26,7 @@ Outputting
 ```
 #### Node.JS
 ``` javascript
-megaquery({
+megaquery.api({
   key: KEY,
   value: VALUE
 }, (logs) => {
