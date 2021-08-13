@@ -1,11 +1,39 @@
 {
-  "name": "megaquery",
-  "version": "1.0.7",
-  "description": "",
+  "_from": "megaquery",
+  "_id": "megaquery@1.1.8",
+  "_inBundle": false,
+  "_integrity": "sha512-XCOO8oRPGc4WoKBsoPNzRxWdejv364c2tHDNV3matTfW6YEqXGEZCSCEtBTQEzRv1vwZCKEW1fur5PAmVij8DA==",
+  "_location": "/megaquery",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "megaquery",
+    "name": "megaquery",
+    "escapedName": "megaquery",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/megaquery/-/megaquery-1.1.8.tgz",
+  "_shasum": "66ac7ff450f6814693fc4a33d6f33f9c75e8e956",
+  "_spec": "megaquery",
+  "_where": "/Users/masonwright/Desktop/search/v2",
+  "author": {
+    "name": "lakefox"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "MeagaQuery is a database that is designed to search billions of key's that are similar, like a license plate number or a [GeoKey](https://github.com/lakefox/geokey), and runs on very low end hardware like a laptop.",
+  "license": "MIT",
   "main": "app.js",
+  "name": "megaquery",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "lakefox",
-  "license": "MIT"
+  "version": "1.1.8"
 }

@@ -26,7 +26,7 @@ Outputting
 ```
 #### Node.JS
 ``` javascript
-megaquery.api({
+megaquery({
   key: KEY,
   value: VALUE
 }, (logs) => {
@@ -52,7 +52,7 @@ Outputting
 ```
 #### Node.JS
 ``` javascript
-megaquery.api({
+megaquery({
   key: KEY,
   value: VALUE,
   overwrite: "true" // this has to be a string
@@ -70,13 +70,13 @@ Outputting
 ```
 #### Node.JS
 ``` javascript
-megaquery.api({
+megaquery({
   q: KEY
 }, (data) => {
   // Do Whatever
 });
 ```
-Replace KEY with the key you previously used to store the value.
+Replace KEY with the key you previously used to store the value, VALUE is what ever you stored on the server with the KEY
 
 ### Error's
 #### HTTP

@@ -1,5 +1,6 @@
 const app = require("express")();
 const fs = require('fs');
+const execFile = require('child_process').execFile;
 
 const base = "./store";
 
@@ -28,46 +29,65 @@ function startServer(port) {
 }
 
 exports.startServer = startServer;
-exports = database;
+exports.api = database;
 
 
-function database(query, cb) {
+async function database(query) {
   if (query.q) {
     var q = query.q;
     var query = base+"/"+q.split("").join("/")+"/data.json";
-    fs.readFile(query, (err, data) => {
-      if (err) {
-        cb("{error: 'value doesn\'t exist'}");
-      } else {
-        cb(data);
-      }
+    return new Promise(function (resolve, reject) {
+      fs.readFile(query, (err, data) => {
+        if (err) {
+          resolve(`{"error": "value doesn't exist"}`);
+        } else {
+          resolve(data.toString());
+        }
+      });
+    });
+  } else if (query.scan != undefined) {
+    return new Promise(function (resolve, reject) {
+      execFile('find', [base], function(err, stdout, stderr) {
+        var fileList = stdout.replace(new RegExp(base, "g"),"").replace(/\//g, "").split('\n');
+        fileList = fileList.filter((a) => {
+          return a.indexOf("data.json") != -1;
+        });
+        fileList = fileList.join("\n").replace(/data.json/g, "").split("\n");
+        if (query.scan != "") {
+          fileList = fileList.filter((a) => {
+            return a.toLowerCase().indexOf(encodeURIComponent(query.scan).toLowerCase()) != -1;
+          });
+        }
+        resolve(fileList);
+      });
     });
   } else if (query.key && query.value) {
     var key = query.key;
     var value = query.value;
     try {
-      fs.statSync(base+"/"+key.split("").join("/"))
+      await fs.statSync(base+"/"+key.split("").join("/"))
     } catch (e) {
       var err = true;
     }
     if (!err && query.overwrite != "true") {
-      cb("{error: 'file exists, overwrite with &overwrite=true'}");
+      return '{"error": "file exists, overwrite with &overwrite=true"}';
     } else {
       for (var i = 1; i < key.length+1; i++) {
         var path = base+"/"+key.slice(0,i).split("").join("/");
         try {
-          fs.statSync(path);
+          await fs.statSync(path);
         } catch (e) {
-          fs.mkdirSync(path);
+          await fs.mkdirSync(path);
         }
       }
-      fs.writeFile(path+"/data.json",value, (err) => {
-        if (err) {
-          cb("{err: "+err+"}");
-        } else {
-          cb("{sucess: true}");
-        }
+      var err = await fs.writeFile(path+"/data.json",value, (err) => {
+
       });
+      if (err) {
+        return '{"err": '+err+"}";
+      } else {
+        return '{"sucess": true}';
+      }
     }
   }
 }
